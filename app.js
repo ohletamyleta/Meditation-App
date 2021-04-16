@@ -10,7 +10,7 @@ const timeDisplay = document.querySelector(".time-display");
 const outlineLength = outline.getTotalLength();
 //Duration
 const timeSelect = document.querySelectorAll(".time-select button");
-let fakeDuration = 600;
+let fakeDuration = 300;
 
 outline.style.strokeDashoffset = outlineLength;
 outline.style.strokeDasharray = outlineLength;
@@ -30,18 +30,6 @@ play.addEventListener("click", function() {
   checkPlaying(song);
 });
 
-replay.addEventListener("click", function() {
-    restartSong(song);
-    
-  });
-
-
-const restartSong = song =>{
-    let currentTime = song.currentTime;
-    song.currentTime = 0;
-    console.log("ciao")
-
-}
 
 timeSelect.forEach(option => {
   option.addEventListener("click", function() {
